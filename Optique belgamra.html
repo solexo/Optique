@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optique Chouraichi - Votre Vision, Notre Mission</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+      color: #333;
+    }
+
+    #hero {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      background-image: url('https://i.imgur.com/ZnogVFj.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5em;
+      color: #00bcd4;
+    }
+
+    .neon-button {
+      background-color: transparent;
+      color: #fff;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      border: 2px solid #00bcd4;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .neon-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(0, 188, 212, 0.7), transparent);
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+
+    .neon-button:hover::before {
+      width: 0;
+      height: 0;
+    }
+
+    .neon-button:hover {
+      color: #00bcd4;
+      box-shadow: 0 0 10px #00bcd4, 0 0 20px #00bcd4, 0 0 40px #00bcd4;
+    }
+
+    .hero-image img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00bcd4;
+    }
+
+    #features {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 30%;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      min-height: 250px;
+      position: relative;
+    }
+
+    .feature::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+      border-radius: 5px;
+    }
+
+    .feature * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature i {
+      font-size: 3em;
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    #contact {
+      background-color: #f5f5f5;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .contact-info a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+    }
+
+    .contact-info .fa-phone { color: #0e9e0e; }
+    .contact-info .fa-envelope { color: #d32f2f; }
+    .contact-info .fa-globe { color: #4285f4; }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+      #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .feature {
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      .contact-info a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Bienvenue chez Optique Chouraichi</h2>
+      <p>Améliorez votre vision avec style. Examen de la vue, lunettes de vue et solaires de qualité. Service professionnel assuré par Hakim Belgamra.</p>
+      <a href="#" id="downloadVCard" class="neon-button">
+        <i class="fas fa-download"></i> Ajouter au Contact
+      </a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Nos Services</h2>
+
+    <div class="feature" style="background-image: url('https://images.unsplash.com/photo-1588776814546-ec7aa5ad3c4e');">
+      <i class="fas fa-eye"></i>
+      <h3>Examen de la vue</h3>
+      <p>Test de vue complet sur place avec les dernières technologies.</p>
+    </div>
+
+    <div class="feature" style="background-image: url('https://images.unsplash.com/photo-1519669011781-d069c3b71a8a');">
+      <i class="fas fa-glasses"></i>
+      <h3>Lunettes de vue</h3>
+      <p>Des modèles tendances adaptés à toutes les prescriptions.</p>
+    </div>
+
+    <div class="feature" style="background-image: url('https://images.unsplash.com/photo-1575844611801-b6c9723f5c43');">
+      <i class="fas fa-sun"></i>
+      <h3>Lunettes solaires</h3>
+      <p>Protégez vos yeux avec style et efficacité.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Besoin d'un rendez-vous ou d'un conseil ? Contactez-nous !</p>
+    <div class="contact-info">
+      <a href="tel:+212663468377"><i class="fas fa-phone"></i> +212663468377</a>
+      <a href="mailto:hakim.belgamra@gmail.com"><i class="fas fa-envelope"></i> hakim.belgamra@gmail.com</a>
+      <a href="https://optiquechouraichi.ma" target="_blank"><i class="fas fa-globe"></i> Site Web</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Optique Chouraichi. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function downloadVCard() {
+      const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Hakim Belgamra
+ORG:Optique Chouraichi
+TEL:+212663468377
+EMAIL:hakim.belgamra@gmail.com
+URL:https://optiquechouraichi.ma
+END:VCARD`;
+
+      const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'optique-chouraichi.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById('downloadVCard').addEventListener('click', function(e) {
+      e.preventDefault();
+      downloadVCard();
+    });
+  </script>
+
+</body>
+</html>
